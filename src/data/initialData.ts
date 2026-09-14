@@ -1,0 +1,303 @@
+import { Product, Order } from '../types';
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 'prod-01',
+    name: 'Dhanak Schiffli Embroidered Kurti',
+    category: 'Stitched Kurtis',
+    fabric: '100% Breathable Cotton Lawn',
+    description: 'A contemporary boxy-cut stitched tunic featuring intricate tonal schiffli eyelet embroidery across the front yoke and relaxed bell sleeves. Finished with delicate lace insets.',
+    price: 3890,
+    originalPrice: 4890,
+    isOnSale: true,
+    isNewArrival: true,
+    isFeatured: true,
+    isOutOfStock: false,
+    stock: 18,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Sage Green', 'Pure White', 'Sky Blue'],
+    primaryImage: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 2,
+  },
+  {
+    id: 'prod-02',
+    name: 'Sahar Geometric Printed 2-Piece',
+    category: '2-Piece Ensembles',
+    fabric: 'Fine Mercerized Cambric Cotton',
+    description: 'Effortless everyday Pakistani pret ensemble featuring an earthy geometric print on straight shirt paired with matching flared culottes trousers.',
+    price: 5490,
+    originalPrice: 6490,
+    isOnSale: false,
+    isNewArrival: true,
+    isFeatured: true,
+    isOutOfStock: false,
+    stock: 24,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Terracotta Orange', 'Indigo Blue', 'Ochre Gold'],
+    primaryImage: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 4,
+  },
+  {
+    id: 'prod-03',
+    name: 'Zareen 3-Piece Embroidered Festive Lawn',
+    category: '3-Piece Festive Lawn',
+    fabric: 'Swiss Voile Lawn with Jacquard Zari Dupatta',
+    description: 'An elegant 3-piece suit with resham embroidered floral spray across the lawn front, paired with an opulent woven organza jacquard dupatta and dyed cambric trouser.',
+    price: 8950,
+    originalPrice: 11950,
+    isOnSale: true,
+    isNewArrival: false,
+    isFeatured: true,
+    isOutOfStock: false,
+    stock: 12,
+    sizes: ['XS', 'S', 'M', 'L', 'Unstitched'],
+    colors: ['Emerald Green', 'Lilac Orchid', 'Pale Blush'],
+    primaryImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 10,
+  },
+  {
+    id: 'prod-04',
+    name: 'Minimalist Relaxed Linen Co-ord',
+    category: 'Casual Solids',
+    fabric: 'Textured Slub Linen',
+    description: 'A modern monochromatic Pakistani co-ord set designed for casual outings and workdays. Mandarin collar tunic with pearl buttons and cropped ankle pants.',
+    price: 4990,
+    originalPrice: 5990,
+    isOnSale: false,
+    isNewArrival: true,
+    isFeatured: false,
+    isOutOfStock: false,
+    stock: 15,
+    sizes: ['XS', 'S', 'M', 'L'],
+    colors: ['Olive Khaki', 'Oatmeal Beige', 'Coal Black'],
+    primaryImage: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 3,
+  },
+  {
+    id: 'prod-05',
+    name: 'Gul-o-Gulzar Printed Lawn Kurti',
+    category: 'Stitched Kurtis',
+    fabric: 'Soft Lawn Cotton',
+    description: 'Vibrant digital floral printed everyday kurti featuring boat neckline and contrasting geometric border detailing along the hem and sleeve cuffs.',
+    price: 2690,
+    originalPrice: 3490,
+    isOnSale: true,
+    isNewArrival: false,
+    isFeatured: false,
+    isOutOfStock: false,
+    stock: 22,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Mustard Yellow', 'Teal Blue'],
+    primaryImage: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 14,
+  },
+  {
+    id: 'prod-06',
+    name: 'Nilofer Embroidered Chiffon 3-Piece',
+    category: '3-Piece Festive Lawn',
+    fabric: 'Fine Chiffon & Cotton Silk',
+    description: 'Festive ready-to-wear ensemble with delicate tilla work on neckline and organza dupatta with scalloped borders. Paired with straight dyed silk trousers.',
+    price: 11500,
+    originalPrice: 14500,
+    isOnSale: true,
+    isNewArrival: false,
+    isFeatured: true,
+    isOutOfStock: false,
+    stock: 8,
+    sizes: ['S', 'M', 'L'],
+    colors: ['Powder Blue', 'Dusty Rose'],
+    primaryImage: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 7,
+  },
+  {
+    id: 'prod-07',
+    name: 'Raw Silk Festive Embroidered Shirt',
+    category: 'Daily Pret',
+    fabric: '80gm Pure Raw Silk',
+    description: 'Luxe modern formal pret with hand-embellished mirror work motifs on collar and cuffs. High side slits and flattering straight fit.',
+    price: 6990,
+    originalPrice: 8500,
+    isOnSale: false,
+    isNewArrival: false,
+    isFeatured: false,
+    isOutOfStock: true, // Marked out of stock for realistic demo
+    stock: 0,
+    sizes: ['S', 'M', 'L'],
+    colors: ['Deep Rust', 'Emerald'],
+    primaryImage: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 18,
+  },
+  {
+    id: 'prod-08',
+    name: 'Chintz Printed Cotton 2-Piece Suit',
+    category: '2-Piece Ensembles',
+    fabric: '100% Breathable Lawn',
+    description: 'Heritage chintz block motifs revitalized for modern casual summer wear. Paired with matching printed straight pants.',
+    price: 4890,
+    originalPrice: 5890,
+    isOnSale: true,
+    isNewArrival: true,
+    isFeatured: true,
+    isOutOfStock: false,
+    stock: 20,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Ruby Crimson', 'Sage Teal'],
+    primaryImage: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=900&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=900&q=80'
+    ],
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 1,
+  }
+];
+
+export const INITIAL_ORDERS: Order[] = [
+  {
+    id: 'ord-101',
+    orderNumber: 'PK-94821',
+    customerName: 'Ayesha Siddiqui',
+    customerPhone: '0300-4829104',
+    customerEmail: 'ayesha.s@gmail.com',
+    address: 'House #42, Street 8, Phase 5, DHA',
+    city: 'Lahore',
+    postalCode: '54792',
+    notes: 'Please ring bell twice upon arrival',
+    paymentMethod: 'Cash on Delivery (COD)',
+    items: [
+      {
+        productId: 'prod-01',
+        name: 'Dhanak Schiffli Embroidered Kurti',
+        price: 3890,
+        size: 'M',
+        color: 'Sage Green',
+        quantity: 1,
+        image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=400&q=80',
+      },
+      {
+        productId: 'prod-02',
+        name: 'Sahar Geometric Printed 2-Piece',
+        price: 5490,
+        size: 'M',
+        color: 'Terracotta Orange',
+        quantity: 1,
+        image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80',
+      }
+    ],
+    subtotal: 9380,
+    shippingFee: 0,
+    totalPrice: 9380,
+    orderDate: '2026-09-12 14:32',
+    status: 'Confirmed',
+  },
+  {
+    id: 'ord-102',
+    orderNumber: 'PK-94822',
+    customerName: 'Fatima Zahra',
+    customerPhone: '0321-9876543',
+    customerEmail: 'fatima.zahra@hotmail.com',
+    address: 'Flat 4B, Clifton View Apartments, Block 2, Clifton',
+    city: 'Karachi',
+    paymentMethod: 'Bank Transfer / Raast',
+    items: [
+      {
+        productId: 'prod-03',
+        name: 'Zareen 3-Piece Embroidered Festive Lawn',
+        price: 8950,
+        size: 'S',
+        color: 'Emerald Green',
+        quantity: 1,
+        image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80',
+      }
+    ],
+    subtotal: 8950,
+    shippingFee: 0,
+    totalPrice: 8950,
+    orderDate: '2026-09-13 11:15',
+    status: 'Shipped',
+  },
+  {
+    id: 'ord-103',
+    orderNumber: 'PK-94823',
+    customerName: 'Hira Naveed',
+    customerPhone: '0333-5123490',
+    customerEmail: 'hiranaveed99@gmail.com',
+    address: 'House #18, Street 24, Sector F-8/2',
+    city: 'Islamabad',
+    paymentMethod: 'Cash on Delivery (COD)',
+    items: [
+      {
+        productId: 'prod-04',
+        name: 'Minimalist Relaxed Linen Co-ord',
+        price: 4990,
+        size: 'L',
+        color: 'Olive Khaki',
+        quantity: 2,
+        image: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=400&q=80',
+      }
+    ],
+    subtotal: 9980,
+    shippingFee: 0,
+    totalPrice: 9980,
+    orderDate: '2026-09-13 18:45',
+    status: 'Pending',
+  }
+];
+
+export const DEMO_PRESET_IMAGES = [
+  {
+    title: 'Emerald Embroidered Lawn',
+    url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Lilac Pastel Schiffli Kurti',
+    url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Terracotta Printed 2-Piece',
+    url: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Minimalist Ivory Cotton Set',
+    url: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Mustard Floral Casual Tunic',
+    url: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Dusty Rose Organza Anarkali',
+    url: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Deep Midnight Velvet Formal',
+    url: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Crimson Red Block Print',
+    url: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=900&q=80',
+  }
+];

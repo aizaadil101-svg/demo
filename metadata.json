@@ -1,0 +1,6 @@
+{
+  "name": "RAWAN - Pakistani Pret & Casual Wear",
+  "description": "Modern, clean and casual e-commerce clothing website for a Pakistani clothing brand featuring stitched kurtis, 2-piece coordinates, festive lawn, inventory controls, and a private admin portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
